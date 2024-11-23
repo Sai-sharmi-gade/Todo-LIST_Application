@@ -1,0 +1,230 @@
+/* Body: Add a background image and improve contrast */
+body {
+    background: url("C:\Users\Sai sharmi Gade\todo-app\client\public\todo-bg.png") no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Todo Home container */
+.todo-home {
+    max-width: 550px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px); /* Slight blur on background */
+    animation: slideIn 0.5s ease-out; /* Animation for smooth transition */
+}
+
+/* Heading */
+h1 {
+    color: #ff6347; /* Tomato color for some warmth */
+    font-size: 3em;
+    text-align: center;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    margin-bottom: 25px;
+}
+
+/* Task list container */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out; /* Hover effect */
+}
+
+li:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Task name with strike-through for completed tasks */
+.task-name {
+    flex-grow: 1;
+    text-align: left;
+    font-size: 1.2em;
+    padding-left: 10px;
+    font-weight: 600;
+    color: #444;
+    transition: color 0.3s ease;
+}
+
+.task-name.completed {
+    text-decoration: line-through;
+    color: #888; /* Gray for completed tasks */
+}
+
+/* Input fields and buttons */
+input, button {
+    padding: 15px;
+    font-size: 1.2em;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+/* Input */
+input {
+    width: 75%;
+    border: 2px solid #ff6347; /* Vibrant border */
+    margin-right: 15px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #ff4500; /* Focused input border color */
+    box-shadow: 0 0 5px rgba(255, 69, 0, 0.6); /* Glowing effect on focus */
+}
+
+/* Button */
+button {
+    background-color: #ff6347;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff4500;
+    transform: translateY(-3px); /* Button lift effect */
+}
+
+/* Trash icon */
+.fas.fa-trash {
+    color: #ff6347;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.fas.fa-trash:hover {
+    color: #ff4500;
+}
+
+/* Popup message for task actions */
+.popup-message {
+    background-color: #48c78e; /* Light green */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Confetti animation */
+@keyframes confettiEffect {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Add some cool transition when page loads */
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Small breakpoints for mobile */
+@media (max-width: 768px) {
+    .todo-home {
+        width: 90%;
+        margin: 50px auto;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    input {
+        width: 70%;
+    }
+}
+
+/* Form styling for Login and Signup (Updated) */
+form {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column; /* Stack elements vertically */
+    margin-top: 50px;
+    width: 100%; /* Make sure it fills the container */
+    max-width: 400px; /* Maximum width for the form */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* White background with a little transparency */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for form */
+    backdrop-filter: blur(8px); /* Blur effect on background */
+    border: 1px solid #ccc;
+}
+
+/* Input and Button Styles inside the Form */
+input, button {
+    width: 100%; /* Make sure input and button take up full width */
+    padding: 12px; 
+    margin-bottom: 15px; /* Space between form fields */
+    border-radius: 8px; /* Rounded corners */
+    border: 2px solid #ff6347; /* Vibrant orange border */
+    font-size: 16px; /* Nice readable font size */
+    transition: border-color 0.3s ease, transform 0.2s;
+}
+
+input:focus, button:hover {
+    border-color: #ff4500; /* Darker orange border color on focus and hover */
+}
+
+button {
+    background-color: #ff6347;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    background-color: #ff4500;
+    transform: translateY(-3px); /* Slight lift effect on hover */
+}
+
+button:active {
+    transform: translateY(1px); /* Button presses down when clicked */
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #ff6347; /* Orange for the heading */
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}

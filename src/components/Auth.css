@@ -1,0 +1,79 @@
+/* Center the entire form container */
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full-screen height */
+    background-color: #f9f9f9; /* Light background for better visibility */
+}
+
+/* Style the form */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items in the form */
+    justify-content: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 350px; /* Fixed width for consistent layout */
+}
+
+/* Input fields and button styles */
+.auth-form input,
+.auth-form button {
+    margin: 10px 0;
+    padding: 12px;
+    width: 90%; /* Adjust width to look uniform */
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Button-specific styles */
+.auth-form button {
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease; /* Add smooth hover effect */
+}
+
+.auth-form button:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+}
+
+/* Paragraph and link styles */
+.auth-form p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    text-align: center;
+    color: #666;
+}
+
+.auth-form a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease; /* Smooth hover effect for links */
+}
+
+.auth-form a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .auth-form {
+        width: 90%; /* Make form take more space on smaller screens */
+    }
+
+    .auth-form input,
+    .auth-form button {
+        width: 100%; /* Full-width for inputs/buttons on small devices */
+    }
+}
